@@ -5,7 +5,7 @@ Y=${X:2:2}
 echo "$Y"
 if [ "$Y <= 85" ] 
 then
-echo "model accuracy is very bad"
+exit 1
 else
 echo "try again"
 fi
