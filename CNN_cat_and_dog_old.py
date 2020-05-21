@@ -18,10 +18,12 @@ from keras.layers import MaxPooling2D
 
 from keras.layers import Flatten
 
+model.add(Convolution2D(filters=32, kernel_size=(3,3), activation=relu,))
 
 # In[4]:
 
 
+model.add(Dense(units=64, activation=relu))
 from keras.layers import Dense
 
 
@@ -150,12 +152,12 @@ train_datagen = ImageDataGenerator(
         horizontal_flip=True)
 test_datagen = ImageDataGenerator(rescale=1./255)
 training_set = train_datagen.flow_from_directory(
-        '/home/cnn_dataset/training_set/',
+        '/home/cnn_dataset_1/training_set/',
         target_size=(64, 64),
         batch_size=32,
         class_mode='binary')
 test_set = test_datagen.flow_from_directory(
-        '/home/cnn_dataset/test_set/',
+        '/home/cnn_dataset_1/test_set/',
         target_size=(64, 64),
         batch_size=32,
         class_mode='binary')
@@ -194,7 +196,7 @@ from keras.preprocessing import image
 # In[ ]:
 
 
-test_image = image.load_img('/home/cnn_dataset/single_prediction/cat_or_dog_2.jpg', 
+test_image = image.load_img('/home/cnn_dataset_1/single_prediction/cat_or_dog_2.jpg', 
                target_size=(64,64))
 
 
