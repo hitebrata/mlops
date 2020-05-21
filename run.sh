@@ -13,7 +13,7 @@ Y=${X:2:2}
 echo "$Y"
 if [ "$Y <= 85" ]
 then
-http://35.193.7.112:8080/job/job3/build?token=1176263a616dcf06a723d56479a4e4034d
+curl http://35.193.7.112:8080/job/job3/build?token=1176263a616dcf06a723d56479a4e4034d
 else
 echo "try again"
 fi
