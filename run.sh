@@ -1,6 +1,6 @@
 #!/bin/bash
 echo "preparing the CNN model"
-nohup python3 -u ./home/CNN_cat_and_dog_old.py > output.log
+nohup python3 -u ./home/CNN_cat_and_dog_old.py > /home/output.log
 
 
 
