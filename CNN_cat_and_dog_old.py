@@ -46,7 +46,7 @@ test_set = test_datagen.flow_from_directory(
 model.fit(
         training_set,
         steps_per_epoch=8000,
-        epochs=1,
+        epochs=15,
         validation_data=test_set,
         validation_steps=800)
 model.save('cnn-cat-dog-model_old.h5')
